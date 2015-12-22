@@ -7,46 +7,21 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
+    <script>
+        if (("flysay.com" == window.location.host) && (window.location.protocol != "https:"))
+            window.location.protocol = "https";
+    </script>
     <%- css(['css/bootstrap.min.css']) %>
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext'
-            rel='stylesheet'
-            type='text/css'>
-    <%- js(['js/jquery-2.1.4.min.js', 'js/jquery.pjax.min.js', 'js/highlightjs/highlight.pack.js']) %>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <style>
-        body {
-            position: relative;
-            font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-            font-size: 14px;
-            line-height: 2;
-            color: #555;
-            background: #fff;
-        }
-    </style>
+    <%- js(['js/jquery-2.1.4.min.js', 'js/jquery.pjax.min.js']) %>
+    <%- css(['js/highlightjs/styles/tomorrow.css']) %>
+    <%- css(['css/base.css']) %>
 </head>
 <body>
-<div class="container" id="pjax-container">
-
+<div id="pjax-container">
     <%- partial('_partial/header') %>
-
-    <a href="<%- url_for('/') %>">HOME</a>
-    <%- list_posts() %>
     <%- body %>
     <%- partial('_partial/footer') %>
 </div>
-<script>
-    $(function () {
-        $('.code').each(function (i, block) {
-            hljs.highlightBlock(block);
-            console.log(123);
-        });
-
-        $(document).pjax('a', '#pjax-container', {
-            fragment: '#pjax-container',
-            timeout: 3000
-        });
-    });
-</script>
+<%- js(['js/highlightjs/highlight.pack.js', 'js/base.js']) %>
 </body>
 </html>

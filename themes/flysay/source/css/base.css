@@ -1,0 +1,70 @@
+body {
+    position: relative;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', "lucida grande", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    color: #111;
+    background: #F7FAFC;
+}
+
+a {
+    color: #555
+}
+
+li {
+    list-style: none;
+}
+
+.title1 {
+    color: #F5871F;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.title1 a {
+    color: #F5871F;
+}
+
+.title1 a:hover {
+    color: #555;
+}
+
+.text-muted {
+    color: #c6c6c6;
+}
+
+.hljs {
+    background: #f7f7f7;
+}
+
+.main-header, .main-footer {
+    height: 300px;
+    line-height: 300px;
+}
+
+.gap {
+    color: #555;
+    margin: 0 10px;
+    font-weight: 800;
+}
+
+.content-wrap {
+    background: #FFFFFF;
+}
+
+.article-header {
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 5px;
+}
+
+.article-meta {
+    padding: 15px 0;
+}
+
+.article-content, .tags-content {
+    padding: 30px 45px;
+}
+
+.tags-content a {
+    margin: 10px;
+}

@@ -1,3 +1,10 @@
-<header>
-    <div>header</div>
+<header class="main-header container">
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <% for (var i in theme.menu){ %>
+            <a class="text-muted" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+            <b class="gap">/</b>
+            <% } %>
+        </div>
+    </div>
 </header>
