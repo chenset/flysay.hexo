@@ -20,6 +20,7 @@
     </div>
     <% if(is_post()){ %>
     <div class="article-directory">
+        <span class="pull-right article-directory-hash">#</span>
         <%- toc(post.content) %>
     </div>
     <% } %>

@@ -15,6 +15,11 @@
     <%- js(['js/jquery-2.1.4.min.js', 'js/jquery.pjax.min.js']) %>
     <%- css(['js/highlightjs/styles/tomorrow.css']) %>
     <%- css(['css/base.css']) %>
+    <% if(is_home()){ %>
+    <link rel="canonical" href="<%= config.url %>"/>
+    <% }else{ %>
+    <link rel="canonical" href="<%= config.url + url_for(path) %>"/>
+    <% } %>
 </head>
 <body>
 <div id="pjax-container">
@@ -22,6 +27,7 @@
     <%- body %>
     <%- partial('_partial/footer') %>
 </div>
+<div id="cover-wrap" class="cover-wrap"></div>
 <%- js(['js/highlightjs/highlight.pack.js', 'js/base.js']) %>
 </body>
 </html>
