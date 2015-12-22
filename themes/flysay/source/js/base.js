@@ -11,7 +11,7 @@ $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
 }).on('pjax:success', function (event, data, status, xhr, options) {
     codeHL();
 }).on('pjax:complete', function (event, data, status, xhr, options) {
-    $('#cover-wrap').hide();
+    $('#cover-wrap').fadeOut(200);
 });
 
 
