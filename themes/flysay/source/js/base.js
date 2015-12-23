@@ -7,11 +7,11 @@ function codeHL() {
 }
 
 $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
-    $('#cover-wrap').fadeIn(300);
+    NProgress.start();
 }).on('pjax:success', function (event, data, status, xhr, options) {
     codeHL();
 }).on('pjax:complete', function (event, data, status, xhr, options) {
-    $('#cover-wrap').fadeOut(200);
+    NProgress.done();
 });
 
 
@@ -19,7 +19,7 @@ $(function () {
     codeHL();
     $(document).pjax('a', '#pjax-container', {
         fragment: '#pjax-container',
-        timeout: 3000
+        timeout: 5000
     });
 });
 
