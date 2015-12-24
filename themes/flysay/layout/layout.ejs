@@ -8,29 +8,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <%- css(
-            config.static_url + '/css/bootstrap.min.css' + config.static_postfix,
-            config.static_url + '/js/highlightjs/styles/tomorrow.css' + config.static_postfix,
-            config.static_url + '/css/nprogress.css' + config.static_postfix,
-            config.static_url + '/css/iconfont.css' + config.static_postfix,
+            config.static_url + '/css/bootstrap.min.css',
+            config.static_url + '/js/highlightjs/styles/tomorrow.css',
+            config.static_url + '/css/nprogress.css',
+            config.static_url + '/css/iconfont.css',
             '/css/base.css'
     ) %>
 
     <%- js(
-            config.static_url + '/js/jquery-2.1.4.min.js' + config.static_postfix,
-            config.static_url + '/js/jquery.pjax.min.js' + config.static_postfix
+            config.static_url + '/js/jquery-2.1.4.min.js',
+            config.static_url + '/js/jquery.pjax.min.js'
     ) %>
     <% if(is_home()){ %>
     <link rel="canonical" href="<%= config.url %>"/>
     <% }else{ %>
     <link rel="canonical" href="<%= config.url + url_for(path) %>"/>
     <% } %>
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext'
-            rel='stylesheet'
-            type='text/css'>
+    <!--<link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext'-->
+    <!--rel='stylesheet'-->
+    <!--type='text/css'>-->
 </head>
 <body>
-<div id="pjax-container">
 
+<div id="pjax-container">
     <%- partial('_partial/header') %>
     <%- body %>
     <%- partial('_partial/footer') %>
@@ -41,9 +41,9 @@
     <i class="icon iconfont">&#xe6a5;</i>
 </div>
 <%- js(
-        config.static_url + '/js/highlightjs/highlight.pack.js' + config.static_postfix,
-        config.static_url + '/js/nprogress.js' + config.static_postfix,
-        config.static_url + '/js/base.js' + config.static_postfix
+        config.static_url + '/js/highlightjs/highlight.pack.js',
+        config.static_url + '/js/nprogress.js',
+        config.static_url + '/js/base.js'
 ) %>
 </body>
 </html>
