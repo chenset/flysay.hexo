@@ -80,6 +80,67 @@
 
 /* Effect 4: bottom border enlarge End*/
 
+/* Effect 21: borders slight translate */
+.cl-effect-21 a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 0;
+    padding:7px;
+    /*text-transform: uppercase;*/
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: 700;
+    text-shadow: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.cl-effect-21 a::before,
+.cl-effect-21 a::after {
+    position: absolute;
+    left: 0;
+    width: 80%;
+    margin-left: 10%;
+    height: 2px;
+    background: #222;
+    content: '';
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+    transform: translateY(-10px);
+}
+
+.cl-effect-21 a::before {
+    top: 0;
+    transform: translateY(-10px);
+}
+
+.cl-effect-21 a::after {
+    bottom: 0;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.cl-effect-21 a:hover,
+.cl-effect-21 a:focus,.cl-effect-21 a.active {
+    color: #222;
+}
+
+.cl-effect-21 a:hover::before,
+.cl-effect-21 a:focus::before,
+.cl-effect-21 a:hover::after,
+.cl-effect-21 a:focus::after,
+.cl-effect-21 a.active::before,
+.cl-effect-21 a.active::after{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* Effect 21: borders slight translate End*/
+
 body {
     position: relative;
     font-family: Lato, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', "lucida grande", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -143,18 +204,29 @@ li {
 
 .main-header {
     background: #eee;
-    height: 100px;
-    line-height: 100px;
+    /*height: 100px;*/
+    /*line-height: 100px;*/
     margin-bottom: 60px;
 }
 
-.main-header nav ul {
-    float: right;
+
+
+.main-logo-wrap{
+    float: left;
+    font-size: 16px;
+    margin-top: 24px;
+    display: inline-block;
 }
 
-.main-header nav li {
+.main-header ul {
     float: left;
-    margin-left: 30px;
+    display: inline-block;
+}
+.main-header ul li {
+    height: 100px;
+    line-height: 115px;
+    float: left;
+    margin-right: 20px;
     color: #444;
 }
 

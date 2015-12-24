@@ -6,16 +6,19 @@ function codeHL() {
     });
 }
 
+$('#main-logo').addClass('active');
 $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
     NProgress.start();
+    $('#main-logo').removeClass('active');
 }).on('pjax:success', function (event, data, status, xhr, options) {
     codeHL();
 }).on('pjax:complete', function (event, data, status, xhr, options) {
+    $('#main-logo').addClass('active');
+
     NProgress.done();
 });
 
 $(document).on('click', '#scroll-to-top', function () {
-    console.log(12312);
     $('html, body').animate({scrollTop: 0}, 600);
 });
 
