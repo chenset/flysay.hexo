@@ -2,9 +2,13 @@ body {
     position: relative;
     font-family: Lato, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', "lucida grande", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 16px;
-    line-height: 2;
+    line-height: 1.5;
     color: #555;
     background: #f1f4f6;
+    word-wrap: break-word;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
 }
 
 a {
