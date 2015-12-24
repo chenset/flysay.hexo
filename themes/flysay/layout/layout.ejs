@@ -7,12 +7,18 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <%- css(['css/bootstrap.min.css']) %>
-    <%- js(['js/jquery-2.1.4.min.js', 'js/jquery.pjax.min.js']) %>
-    <%- css(['js/highlightjs/styles/tomorrow.css']) %>
-    <%- css(['css/base.css']) %>
-    <%- css(['css/nprogress.css']) %>
-    <%- css(['css/iconfont.css']) %>
+    <%- css(
+            config.static_url + '/css/bootstrap.min.css' + config.static_postfix,
+            config.static_url + '/js/highlightjs/styles/tomorrow.css' + config.static_postfix,
+            config.static_url + '/css/nprogress.css' + config.static_postfix,
+            config.static_url + '/css/iconfont.css' + config.static_postfix,
+            '/css/base.css'
+    ) %>
+
+    <%- js(
+            config.static_url + '/js/jquery-2.1.4.min.js' + config.static_postfix,
+            config.static_url + '/js/jquery.pjax.min.js' + config.static_postfix
+    ) %>
     <% if(is_home()){ %>
     <link rel="canonical" href="<%= config.url %>"/>
     <% }else{ %>
@@ -34,6 +40,10 @@
         style="cursor: pointer;position:fixed;bottom: 50px;right:50px;width: 40px;height: 40px;line-height:40px;background: #dfdfdf;border-radius: 50%;text-align: center;font-weight: 800;color:#555">
     <i class="icon iconfont">&#xe6a5;</i>
 </div>
-<%- js(['js/highlightjs/highlight.pack.js', 'js/nprogress.js', 'js/base.js']) %>
+<%- js(
+        config.static_url + '/js/highlightjs/highlight.pack.js' + config.static_postfix,
+        config.static_url + '/js/nprogress.js' + config.static_postfix,
+        config.static_url + '/js/base.js' + config.static_postfix
+) %>
 </body>
 </html>

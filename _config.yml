@@ -16,6 +16,8 @@ url: http://flysay.com
 root: /
 permalink: :title.html
 permalink_defaults:
+static_url: http://static.flysay.com
+static_postfix: ?v=201512241506.cdn
 
 # Directory
 source_dir: source
