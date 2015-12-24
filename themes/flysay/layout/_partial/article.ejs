@@ -1,12 +1,9 @@
 <article class="article">
     <header class="article-header text-left">
-        <% if(!index){ %>
-        <a class="pull-right text-muted" href="<%- url_for('/') %>">返回首页</a>
-        <% } %>
         <% if(index){ %>
-        <h2 class="title1"><a href="<%- url_for(post.path) %>"><%- post.title %></a></h2>
+        <h2 class="title1 cl-effect-4"><a class="" href="<%- url_for(post.path) %>"><%- post.title %></a></h2>
         <% }else{ %>
-        <h1 class="title1"><%- post.title %></h1>
+        <h1 class="title2"><%- post.title %></h1>
         <% } %>
     </header>
     <div class="article-meta text-muted">

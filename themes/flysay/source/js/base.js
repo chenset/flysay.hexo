@@ -14,6 +14,9 @@ $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
     NProgress.done();
 });
 
+$(document).on('click', '#scrollToTop', function () {
+    $('html, body').animate({scrollTop: 0}, 600);
+});
 
 $(function () {
     codeHL();

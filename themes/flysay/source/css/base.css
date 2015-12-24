@@ -1,35 +1,37 @@
 body {
     position: relative;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', "lucida grande", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-    font-size: 14px;
+    font-family: Lato, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', "lucida grande", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 16px;
     line-height: 2;
-    color: #111;
+    color: #555;
     background: #f1f4f6;
 }
 
 a {
-    color: #555
+    color: #555;
+    text-decoration: none !important;
 }
 
 li {
     list-style: none;
 }
 
-h1.title1{
-    color: #444;
-}
-
-h2.title1{
-    color: #F5871F;
+.title2 {
+    color: #555;
 }
 
 .title1 {
+    color: #F5871F;
+}
 
-    font-size: 2em;
+.title1, .title2 {
+    letter-spacing: 1px;
+    font-size: 1.5em;
     font-weight: 600;
 }
 
 .title1 a {
+    letter-spacing: 1px;
     color: #F5871F;
 }
 
@@ -51,12 +53,12 @@ h2.title1{
 }
 
 .gap {
-    color: #666;
+    color: #555;
     margin: 0 10px;
     font-weight: 800;
 }
 
-td.gutter{
+td.gutter {
     padding-left: 10px;
     padding-right: 15px;
 }
@@ -83,7 +85,7 @@ td.gutter{
 }
 
 .article-header {
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #efefef;
     padding-bottom: 5px;
 }
 
@@ -99,7 +101,7 @@ td.gutter{
     margin: 10px;
 }
 
-.cover-wrap{
+.cover-wrap {
     display: none;
     position: fixed;
     top: 0;
@@ -143,6 +145,7 @@ td.gutter{
     -moz-osx-font-smoothing: grayscale;
     position: relative;
 }
+
 .hvr-ripple-out:before {
     content: '';
     position: absolute;
@@ -155,8 +158,39 @@ td.gutter{
     animation-duration: 1s;
     border-radius: 50%
 }
+
 .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
     -webkit-animation-name: hvr-ripple-out;
     animation-name: hvr-ripple-out;
 }
-/* Ripple Out End*/
+
+/* Effect 4: bottom border enlarge */
+.cl-effect-4 a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cl-effect-4 a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #555;
+    content: '';
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transform: translateY(-5px);
+}
+
+.cl-effect-4 a:hover::after,
+.cl-effect-4 a:focus::after {
+    height: 1px;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Effect 4: bottom border enlarge End*/

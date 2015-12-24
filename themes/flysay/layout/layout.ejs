@@ -12,19 +12,27 @@
     <%- css(['js/highlightjs/styles/tomorrow.css']) %>
     <%- css(['css/base.css']) %>
     <%- css(['css/nprogress.css']) %>
+    <%- css(['css/iconfont.css']) %>
     <% if(is_home()){ %>
     <link rel="canonical" href="<%= config.url %>"/>
     <% }else{ %>
     <link rel="canonical" href="<%= config.url + url_for(path) %>"/>
     <% } %>
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext'
+            rel='stylesheet'
+            type='text/css'>
 </head>
 <body>
 <div id="pjax-container">
+
     <%- partial('_partial/header') %>
     <%- body %>
     <%- partial('_partial/footer') %>
 </div>
-<div class="hvr-ripple-out" style="position:fixed;bottom: 50px;right:50px;width: 40px;height: 40px;background: #dfdfdf;border-radius: 50%">
+<div class="hvr-ripple-out"
+        id="scrollToTop"
+        style="cursor: pointer;position:fixed;bottom: 50px;right:50px;width: 40px;height: 40px;line-height:40px;background: #dfdfdf;border-radius: 50%;text-align: center;font-weight: 800;color:#555">
+    <i class="icon iconfont">&#xe6a5;</i>
 </div>
 <%- js(['js/highlightjs/highlight.pack.js', 'js/nprogress.js', 'js/base.js']) %>
 </body>
