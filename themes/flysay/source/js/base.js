@@ -14,7 +14,8 @@ $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
     NProgress.done();
 });
 
-$(document).on('click', '#scrollToTop', function () {
+$(document).on('click', '#scroll-to-top', function () {
+    console.log(12312);
     $('html, body').animate({scrollTop: 0}, 600);
 });
 
@@ -24,5 +25,7 @@ $(function () {
         fragment: '#pjax-container',
         timeout: 5000
     });
+
+    NProgress.configure({ showSpinner: false });
 });
 

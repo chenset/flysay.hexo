@@ -10,7 +10,7 @@
     <%- css(
             config.static_url + '/css/bootstrap.min.css',
             config.static_url + '/js/highlightjs/styles/tomorrow.css',
-            config.static_url + '/css/nprogress.css',
+            '/css/nprogress.css',
             config.static_url + '/css/iconfont.css',
             '/css/base.css'
     ) %>
@@ -35,15 +35,14 @@
     <%- body %>
     <%- partial('_partial/footer') %>
 </div>
-<div class="hvr-ripple-out"
-        id="scrollToTop"
-        style="cursor: pointer;position:fixed;bottom: 50px;right:50px;width: 40px;height: 40px;line-height:40px;background: #dfdfdf;border-radius: 50%;text-align: center;font-weight: 800;color:#555">
+
+<div class="hvr-ripple-out scroll-to-top" id="scroll-to-top">
     <i class="icon iconfont">&#xe6a5;</i>
 </div>
 <%- js(
         config.static_url + '/js/highlightjs/highlight.pack.js',
         config.static_url + '/js/nprogress.js',
-        config.static_url + '/js/base.js'
+        '/js/base.js'
 ) %>
 </body>
 </html>
