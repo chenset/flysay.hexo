@@ -85,7 +85,7 @@
     position: relative;
     display: inline-block;
     margin: 15px 0;
-    padding:7px;
+    padding: 7px 0;
     /*text-transform: uppercase;*/
     letter-spacing: 1px;
     color: #000;
@@ -100,8 +100,8 @@
 .cl-effect-21 a::after {
     position: absolute;
     left: 0;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
     height: 2px;
     background: #222;
     content: '';
@@ -123,7 +123,7 @@
 }
 
 .cl-effect-21 a:hover,
-.cl-effect-21 a:focus,.cl-effect-21 a.active {
+.cl-effect-21 a:focus, .cl-effect-21 a.active {
     color: #222;
 }
 
@@ -132,7 +132,7 @@
 .cl-effect-21 a:hover::after,
 .cl-effect-21 a:focus::after,
 .cl-effect-21 a.active::before,
-.cl-effect-21 a.active::after{
+.cl-effect-21 a.active::after {
     opacity: 1;
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
@@ -203,15 +203,10 @@ li {
 }
 
 .main-header {
-    background: #eee;
-    /*height: 100px;*/
-    /*line-height: 100px;*/
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
-
-
-.main-logo-wrap{
+.main-logo-wrap {
     float: left;
     font-size: 16px;
     margin-top: 24px;
@@ -222,6 +217,7 @@ li {
     float: left;
     display: inline-block;
 }
+
 .main-header ul li {
     height: 100px;
     line-height: 115px;

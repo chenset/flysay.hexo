@@ -1,13 +1,16 @@
-<header class="main-header container-fluid">
+<header class="main-header">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <strong class="cl-effect-21 main-logo-wrap"><a id="main-logo" href="<% url_for('/')%>">FlySay - Chenset</a></strong>
+                <nav>
+                    <strong class="cl-effect-21 main-logo-wrap"><a id="main-logo"
+                                href="<% url_for('/') %>">FlySay - Chenset</a></strong>
                     <ul>
                         <% for (var i in theme.menu){ %>
                         <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
                         <% } %>
                     </ul>
+                </nav>
             </div>
         </div>
     </div>
