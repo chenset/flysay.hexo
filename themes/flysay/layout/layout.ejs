@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <%
+    var title = page.title;
+
+    if (is_archive()) {
+        title = 'Archives';
+
+        if (is_month()) {
+            title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            title += ': ' + page.year;
+        }
+    } else if (is_category()) {
+        title = 'Category: ' + page.category;
+    } else if (is_tag()) {
+        title = page.tag + ' - 标签';
+    }
+    %>
     <title>
+        <% if (title){ %>
+        <%= title %> -
+        <% } %>
         <%= config.title %>
     </title>
     <meta charset="UTF-8"/>

@@ -3,8 +3,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <nav>
-                    <strong class="main-logo-wrap"><a id="main-logo"
-                                href="<% url_for('/') %>">FlySay - Chenset</a></strong>
+                    <strong class="main-logo-wrap">
+                        <a id="main-logo"
+                                href="<%- url_for('/') %>">FlySay - Chenset</a></strong>
                     <ul>
                         <% for (var i in theme.menu){ %>
                         <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
