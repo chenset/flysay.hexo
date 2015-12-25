@@ -15,9 +15,20 @@ $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
     NProgress.done();
 });
 
-$(document).on('click', '#scroll-to-top', function () {
-    $('html, body').animate({scrollTop: 0}, 600);
-});
+$(document)
+    .on('click', '#scroll-to-top', function () {
+        $('html, body').animate({scrollTop: 0}, 600);
+    })
+    .on('scroll', function () {
+        clearTimeout(window._scrollTimeoutTimer);
+        window._scrollTimeoutTimer = setTimeout(function () {
+            if ($(document).scrollTop() > 500) {
+                $('#scroll-to-top').fadeIn();
+            } else {
+                $('#scroll-to-top').fadeOut();
+            }
+        }, 300);
+    });
 
 $(function () {
     $('#main-logo').addClass('active');
@@ -27,6 +38,6 @@ $(function () {
         timeout: 5000
     });
 
-    NProgress.configure({showSpinner: false, speed: 500 });
+    NProgress.configure({showSpinner: false, speed: 500});
 });
 

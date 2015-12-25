@@ -16,10 +16,13 @@
         }) %>
     </div>
     <% if(is_post()){ %>
+
+    <% if(toc(post.content)){ %>
     <div class="article-directory">
-        <span class="pull-right article-directory-hash">#</span>
+        <span class="pull-right article-directory-hash">目录</span>
         <%- toc(post.content) %>
     </div>
+    <% } %>
     <% } %>
     <div class="article-content">
         <%- post.content %>
