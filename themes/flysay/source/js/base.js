@@ -1,4 +1,5 @@
 "use strict";
+var $mainLogo = $('#main-logo');
 
 function codeHL() {
     $('figure, code').each(function (i, block) {
@@ -6,15 +7,13 @@ function codeHL() {
     });
 }
 
-$('#main-logo').addClass('active');
 $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
     NProgress.start();
-    $('#main-logo').removeClass('active');
+    $mainLogo.removeClass('active');
 }).on('pjax:success', function (event, data, status, xhr, options) {
     codeHL();
 }).on('pjax:complete', function (event, data, status, xhr, options) {
-    $('#main-logo').addClass('active');
-
+    $mainLogo.addClass('active');
     NProgress.done();
 });
 
@@ -23,12 +22,13 @@ $(document).on('click', '#scroll-to-top', function () {
 });
 
 $(function () {
+    $mainLogo.addClass('active');
     codeHL();
     $(document).pjax('a', '#pjax-container', {
         fragment: '#pjax-container',
         timeout: 5000
     });
 
-    NProgress.configure({ showSpinner: false });
+    NProgress.configure({showSpinner: false});
 });
 
