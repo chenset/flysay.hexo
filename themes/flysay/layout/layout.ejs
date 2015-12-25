@@ -8,16 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <%- css(
-            config.static_url + '/css/bootstrap.min.css',
-            config.static_url + '/js/highlightjs/styles/default.css',
-             '/css/nprogress.css',
-            config.static_url + '/css/iconfont.css',
+            '/css/bootstrap.min.css',
+            '/js/highlightjs/styles/default.css',
+            '/css/nprogress.css',
+            '/css/iconfont.css',
             '/css/base.css'
     ) %>
 
     <%- js(
-            config.static_url + '/js/jquery-2.1.4.min.js',
-            config.static_url + '/js/jquery.pjax.min.js'
+            '/js/jquery-2.1.4.min.js',
+            '/js/jquery.pjax.min.js'
     ) %>
     <% if(is_home()){ %>
     <link rel="canonical" href="<%= config.url %>"/>
@@ -25,8 +25,8 @@
     <link rel="canonical" href="<%= config.url + url_for(path) %>"/>
     <% } %>
     <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext'
-    rel='stylesheet'
-    type='text/css'>
+            rel='stylesheet'
+            type='text/css'>
 </head>
 <body>
 
@@ -40,8 +40,8 @@
     <i class="icon iconfont">&#xe6a5;</i>
 </div>
 <%- js(
-        config.static_url + '/js/highlightjs/highlight.pack.js',
-        config.static_url + '/js/nprogress.js',
+        '/js/highlightjs/highlight.pack.js',
+        '/js/nprogress.js',
         '/js/base.js'
 ) %>
 </body>

@@ -64,7 +64,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background: #555;
+    background: #666;
     content: '';
     opacity: 0;
     transition: height 0.3s, opacity 0.3s, transform 0.3s;
@@ -80,72 +80,11 @@
 
 /* Effect 4: bottom border enlarge End*/
 
-/* Effect 21: borders slight translate */
-.cl-effect-21 a {
-    position: relative;
-    display: inline-block;
-    margin: 15px 0;
-    padding: 7px 0;
-    /*text-transform: uppercase;*/
-    letter-spacing: 1px;
-    color: #000;
-    font-weight: 700;
-    text-shadow: none;
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    transition: color 0.3s;
-}
-
-.cl-effect-21 a::before,
-.cl-effect-21 a::after {
-    position: absolute;
-    left: 0;
-    width: 90%;
-    margin-left: 5%;
-    height: 2px;
-    background: #222;
-    content: '';
-    opacity: 0;
-    transition: opacity 1s, transform 1s;
-    transform: translateY(-10px);
-}
-
-.cl-effect-21 a::before {
-    top: 0;
-    transform: translateY(-10px);
-}
-
-.cl-effect-21 a::after {
-    bottom: 0;
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    transform: translateY(10px);
-}
-
-.cl-effect-21 a:hover,
-.cl-effect-21 a:focus, .cl-effect-21 a.active {
-    color: #222;
-}
-
-.cl-effect-21 a:hover::before,
-.cl-effect-21 a:focus::before,
-.cl-effect-21 a:hover::after,
-.cl-effect-21 a:focus::after,
-.cl-effect-21 a.active::before,
-.cl-effect-21 a.active::after {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    transform: translateY(0px);
-}
-
-/* Effect 21: borders slight translate End*/
-
 body {
     position: relative;
     font-family: Lato, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', "lucida grande", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-    line-height: 1.5;
-    color: #555;
+    line-height: 2;
+    color: #666;
     /*background: #f1f4f6;*/
     word-wrap: break-word;
     -webkit-tap-highlight-color: transparent;
@@ -158,12 +97,12 @@ body {
 }
 
 a {
-    color: #555;
+    color: #666;
     text-decoration: none !important;
 }
 
 a:hover {
-    color: #555;
+    color: #666;
 }
 
 li {
@@ -171,11 +110,11 @@ li {
 }
 
 .title2 {
-    color: #555;
+    color: #666;
 }
 
 .title1 {
-    color: #555;
+    color: #666;
 }
 
 .title1, .title2 {
@@ -186,11 +125,11 @@ li {
 
 .title1 a {
     letter-spacing: 1px;
-    color: #555;
+    color: #666;
 }
 
 .title1 a:hover {
-    color: #555 !important;
+    color: #333 !important;
 }
 
 .text-muted {
@@ -203,12 +142,13 @@ li {
 
 .main-header {
     margin-bottom: 20px;
+    height: 100px;
+    line-height: 100px;
 }
 
 .main-logo-wrap {
     float: left;
-    font-size: 14px;
-    margin-top: 24px;
+    font-size: 18px;
     display: inline-block;
 }
 
@@ -218,8 +158,6 @@ li {
 }
 
 .main-header ul li {
-    height: 100px;
-    line-height: 115px;
     float: left;
     margin-right: 20px;
     color: #444;
@@ -231,19 +169,19 @@ li {
 }
 
 .gap {
-    color: #555;
+    color: #666;
     margin: 0 10px;
     font-weight: 800;
 }
 
 td.gutter {
-    color:#9D2E2E;
+    color: #9D2E2E;
     padding-left: 8px;
     padding-right: 8px;
     border-right: 1px solid #e9e9e9;
 }
 
-td.code{
+td.code {
     padding-left: 8px;
 }
 
@@ -255,21 +193,26 @@ td.code{
     border-bottom: 1px solid #e3e3e3;
 }
 
+.content-wrap h3, .content-wrap h4, .content-wrap h5, .content-wrap h6 {
+    font-weight: 600;
+}
+
 .content-wrap a:hover {
-    border-bottom-color: #555;
-    color: #555;
+    border-bottom-color: #333;
+    color: #333;
 }
 
 .article-directory {
     background: #F7F7F7;
-    border: 1px dashed #555;
+    border: 1px dashed #666;
 }
 
 .article-directory ol.toc {
     padding-top: 20px;
     padding-bottom: 10px;
 }
-.article-directory li.toc-item  {
+
+.article-directory li.toc-item {
     line-height: 30px;
 }
 
@@ -277,7 +220,7 @@ td.code{
     font-size: 16px;
     margin-right: 3px;
     font-weight: 400;
-    color: #555;
+    color: #666;
 }
 
 .article-header {
@@ -312,6 +255,7 @@ a.toc-link {
 }
 
 .scroll-to-top {
+    display: none;
     cursor: pointer;
     position: fixed;
     bottom: 50px;
@@ -323,5 +267,5 @@ a.toc-link {
     border-radius: 50%;
     text-align: center;
     font-weight: 800;
-    color: #555
+    color: #666
 }
