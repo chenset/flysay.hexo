@@ -1,6 +1,4 @@
 "use strict";
-var $mainLogo = $('#main-logo');
-
 function codeHL() {
     $('figure, code').each(function (i, block) {
         hljs.highlightBlock(block);
@@ -9,11 +7,11 @@ function codeHL() {
 
 $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
     NProgress.start();
-    $mainLogo.removeClass('active');
+    $('#main-logo').removeClass('active');
 }).on('pjax:success', function (event, data, status, xhr, options) {
     codeHL();
-}).on('pjax:complete', function (event, data, status, xhr, options) {
-    $mainLogo.addClass('active');
+}).on('pjax:end', function (event, data, status, xhr, options) {
+    $('#main-logo').addClass('active');
     NProgress.done();
 });
 
@@ -22,7 +20,7 @@ $(document).on('click', '#scroll-to-top', function () {
 });
 
 $(function () {
-    $mainLogo.addClass('active');
+    $('#main-logo').addClass('active');
     codeHL();
     $(document).pjax('a', '#pjax-container', {
         fragment: '#pjax-container',
