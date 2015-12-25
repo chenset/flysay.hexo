@@ -6,7 +6,7 @@ function codeHL() {
 }
 
 $('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
-    NProgress.start();
+    NProgress.set(0.99);
     $('#main-logo').removeClass('active');
 }).on('pjax:success', function (event, data, status, xhr, options) {
     codeHL();
@@ -27,6 +27,6 @@ $(function () {
         timeout: 5000
     });
 
-    NProgress.configure({showSpinner: false});
+    NProgress.configure({showSpinner: false, speed: 500 });
 });
 
