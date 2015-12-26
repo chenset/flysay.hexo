@@ -38,6 +38,6 @@ $(function () {
         timeout: 5000
     });
 
-    NProgress.configure({showSpinner: false, speed: 500});
+    NProgress.configure({showSpinner: false, speed: 600});
 });
 

@@ -73,3 +73,6 @@ deploy:
   type: git
   repo: https://chenset@github.com/chenset/chenset.github.io.git
   branch: master
+
+sitemap:
+  path: sitemap.xml
