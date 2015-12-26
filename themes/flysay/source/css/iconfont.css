@@ -15,4 +15,6 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-less:before { content: "\e6a5"; }
+.icon-github:before { content: "\e6f4"; }
+.icon-search:before { content: "\e60d"; }
+.icon-up:before { content: "\e605"; }
