@@ -287,8 +287,9 @@ a.toc-link {
     border-radius: 50%;
     text-align: center;
     color: #666;
+}
+.scroll-to-top i{
     font-size: 12px;
-
 }
 
 .search-form-input {
