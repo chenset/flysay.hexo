@@ -30,7 +30,6 @@
     <%- css(
             '/css/bootstrap.min.css',
             '/js/highlightjs/styles/default.css',
-            '/css/nprogress.css',
             '/css/iconfont.css',
             '/css/base.css'
     ) %>
@@ -50,7 +49,9 @@
 
 <div id="pjax-container">
     <%- partial('_partial/header') %>
-    <%- body %>
+    <div id="main-container">
+        <%- body %>
+    </div>
     <%- partial('_partial/footer') %>
 </div>
 
@@ -59,7 +60,8 @@
 </div>
 <%- js(
         '/js/highlightjs/highlight.pack.js',
-        '/js/nprogress.js',
+        '/js/velocity.min.js',
+        '/js/velocity.ui.min.js',
         '/js/base.js'
 ) %>
 </body>

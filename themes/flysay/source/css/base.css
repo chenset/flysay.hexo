@@ -1,54 +1,3 @@
-/* Ripple Out */
-@-webkit-keyframes hvr-ripple-out {
-    100% {
-        top: -12px;
-        right: -12px;
-        bottom: -12px;
-        left: -12px;
-        opacity: 0;
-    }
-}
-
-@keyframes hvr-ripple-out {
-    100% {
-        top: -12px;
-        right: -12px;
-        bottom: -12px;
-        left: -12px;
-        opacity: 0;
-    }
-}
-
-.hvr-ripple-out {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-}
-
-.hvr-ripple-out:before {
-    content: '';
-    position: absolute;
-    border: #e1e1e1 solid 6px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    border-radius: 50%
-}
-
-.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
-    -webkit-animation-name: hvr-ripple-out;
-    animation-name: hvr-ripple-out;
-}
-
 /* Effect 4: bottom border enlarge */
 .cl-effect-4 a {
     position: relative;
@@ -110,7 +59,9 @@ body {
     backface-visibility: hidden;
 }
 
-*:focus { outline: none; }
+*:focus {
+    outline: none;
+}
 
 ::selection {
     background: #efefef;
@@ -131,6 +82,7 @@ li {
 
 .title2 {
     color: #666;
+    padding-bottom: 7px;
 }
 
 .title1 {
@@ -146,6 +98,7 @@ li {
 .title1 a {
     letter-spacing: 1px;
     color: #666;
+    padding-bottom: 7px;
 }
 
 .title1 a:hover {
@@ -161,18 +114,28 @@ li {
 }
 
 .main-header {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     height: 100px;
-    line-height: 100px;
 }
 
 .main-logo-wrap {
+    margin-top: 32px;
     float: left;
     font-size: 18px;
     display: inline-block;
 }
 
+.main-logo-wrap a {
+    padding: 2px 7px;
+    background: #efefef;
+}
+
+.main-logo-wrap a:hover {
+    color: #000;
+}
+
 .main-header ul {
+    margin-top: 37px;
     float: left;
     display: inline-block;
 }
@@ -181,6 +144,16 @@ li {
     float: left;
     margin-right: 20px;
     color: #444;
+}
+
+.main-header ul li a {
+    display: block;
+    padding: 2px 7px;
+}
+
+.main-header ul li a:hover {
+    background: #efefef;
+    color: #000;
 }
 
 .main-footer {
@@ -244,8 +217,8 @@ td.code {
 }
 
 .article-header {
-    border-bottom: 1px solid #efefef;
-    padding-bottom: 5px;
+    /*border-bottom: 1px solid #efefef;*/
+    /*padding-bottom: 5px;*/
 }
 
 .article-header a {
@@ -253,12 +226,12 @@ td.code {
 }
 
 .article-meta {
-    padding: 15px 0;
+    margin-top: -5px;
 }
 
 .article-content, .tags-content {
     font-size: 14px;
-    padding: 30px 0 70px;
+    padding: 20px 0 50px;
 }
 
 .article-tag-link::before {
@@ -288,24 +261,30 @@ a.toc-link {
     text-align: center;
     color: #666;
 }
-.scroll-to-top i{
+
+.scroll-to-top i {
     font-size: 12px;
 }
 
+@media (max-width: 770px) {
+    .search-form {
+        display: none;
+    }
+}
+
 .search-form-input {
+    float: right;
     height: 20px;
     border: none;
     color: #666;
     border-bottom: 1px solid #ccc;
-    float: right;
-    margin-top: 38px;
+    margin-top: 40px;
     width: 150px;
     padding-left: 22px;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAANwAAADcBYx2BhQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFtSURBVDiNpZO/SgNBGMRnPuVI6QsEGyuJmmQ3V9pIfIQUFhZX+AABS8FCO/EBAlr6AJZqGYPehTQiiJBCBMs0Nql2bC5iLqIRBxaW3Z3ffrN/KAn/0WJxoF6vb5pZAsADKAN4kJRKOhkMBm/F9TbpVCqVyDl3amYXAO4B7IYQVgAckByb2cB7v1MEcBLBOXdKcjWKop1erzcqLozjuBpCuDSzJE3TmylAXvZFFEXr35kn8t5vA+iUSqW1brf7/hkhz3z8kxkA+v3+FYCn8Xi8VTwDn+eeR7eSfBFQDiG8zuMm+WJmy0XAg5lV5gFI2pD0PAWQlAJo/mZutVoLAJok74qAEwBJHMfVnwDD4bAtaZRl2fUUIH9h7RDCZX5VMzs75/ZJHpG8+TrHr38hN58BeARwS/JF0gaApqRRbj4kuZdl2fkMAABqtdqSmW2TrJIsS3omeTcpu9FoJJI6nxBJf27e+8Q515E0W8Ff9QH9qMrXMGerDgAAAABJRU5ErkJggg==) no-repeat scroll 0 0px;
 }
 
-
-.search-form-input:focus{
+.search-form-input:focus {
     border-bottom-color: #333;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAANwAAADcBYx2BhQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEbSURBVDiNpdO9SoMxFMbx37HgJojgUhBvQFDEuSDYzk4OHR2EXoCbgpNjL0BQBG/CwcFBQV3VxcmvwUlwFIQ4NC2vb6utGsiQnPP8k/OcJFJK/jPGyhsRUYuIw4i4iYi3iDiLiHZEVAcSUkryLcbRxjNaWMQ0lrGLFzS7+T1dAdDGMabKSTm+gEes9AFQyycPFBcgDdxjogw4ROsncQFyjNXuumviEi5HNP4853/pwgyeRgQ8YLYMuMbciIB53JUBV6gPU0ZEJedd9DazMVWdPi8MMXATp9+9g6ZOnxsDhJUsfsdWMRbFvxARDezjVsfth1xzHa84wQ42UkoHvRJKp01iTef5HmEb9UJ8HR9Y/1LCb2aG7PWV8JfxCec5IaV0J3cMAAAAAElFTkSuQmCC) no-repeat scroll 0 0px;
 }
