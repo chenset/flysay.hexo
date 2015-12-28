@@ -10,6 +10,7 @@ function loadingAnimate() {
         $secondLoadingEls = $('.main-header a,.main-header input,#footer-content'),
         stagger = 150;
 
+    $firstLoadingEls.add($secondLoadingEls).css({visibility: 'visible'});
     $secondLoadingEls.hide();
 
     $firstLoadingEls.velocity("transition.slideDownIn", {

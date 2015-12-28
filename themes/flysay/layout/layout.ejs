@@ -35,8 +35,7 @@
     ) %>
 
     <%- js(
-            '/js/jquery-2.1.4.min.js',
-            '/js/jquery.pjax.min.js'
+            '/js/jquery-2.1.4.min.js'
     ) %>
     <% if(is_home()){ %>
     <link rel="canonical" href="<%= config.url %>"/>
@@ -59,6 +58,7 @@
     <i class="icon iconfont icon-up"></i>
 </div>
 <%- js(
+        '/js/jquery.pjax.min.js',
         '/js/highlightjs/highlight.pack.js',
         '/js/velocity.min.js',
         '/js/velocity.ui.min.js',
