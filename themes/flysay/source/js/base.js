@@ -50,15 +50,6 @@ $(document)
 
     .on('pjax:success', '#pjax-container', function (event, data, status, xhr, options) {
         codeHL();
-
-        //baidu hm
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?94dfa9bd4d3ea70a00c48712f95ef978";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
     })
 
     .on('pjax:end', '#pjax-container', function (event, data, status, xhr, options) {
