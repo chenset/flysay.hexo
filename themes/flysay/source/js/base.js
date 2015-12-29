@@ -24,19 +24,11 @@ function loadingAnimate() {
     }, $firstLoadingEls.length * stagger + 400);
 }
 
-$('#pjax-container').on('pjax:beforeSend', function (event, setting, options) {
-    $('#main-logo').removeClass('active');
-}).on('pjax:success', function (event, data, status, xhr, options) {
-    codeHL();
-}).on('pjax:end', function (event, data, status, xhr, options) {
-    $('#main-logo').addClass('active');
-    loadingAnimate();
-});
-
 $(document)
     .on('click', '#scroll-to-top', function () {
         $('html, body').animate({scrollTop: 0}, 600);
     })
+
     .on('scroll', function () {
         clearTimeout(window._scrollTimeoutTimer);
         window._scrollTimeoutTimer = setTimeout(function () {
@@ -50,6 +42,19 @@ $(document)
                 });
             }
         }, 300);
+    })
+
+    .on('pjax:beforeSend', '#pjax-container', function (event, setting, options) {
+        $('#main-logo').removeClass('active');
+    })
+
+    .on('pjax:success', '#pjax-container', function (event, data, status, xhr, options) {
+        codeHL();
+    })
+
+    .on('pjax:end', '#pjax-container', function (event, data, status, xhr, options) {
+        $('#main-logo').addClass('active');
+        loadingAnimate();
     });
 
 $(function () {
