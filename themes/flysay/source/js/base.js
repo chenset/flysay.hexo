@@ -55,6 +55,14 @@ $(document)
     .on('pjax:end', '#pjax-container', function (event, data, status, xhr, options) {
         $('#main-logo').addClass('active');
         loadingAnimate();
+    }).on('click', 'a.toc-link', function () {
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+        return false;
     });
 
 $(function () {

@@ -77,33 +77,26 @@ a {
     text-decoration: none !important;
 }
 
-a:hover {
-    color: #666;
+a:hover, a:focus {
+    color: #111;
 }
 
 li {
     list-style: none;
 }
 
-.title2 {
-    color: #666;
-    padding-bottom: 7px;
-}
-
-.title1 {
-    color: #666;
-}
-
 .title1, .title2 {
+    margin: 10px 0;
+    color: #666;
+    line-height: 1.5em;
     letter-spacing: 1px;
     font-size: 2em;
-    /*font-weight: 600;*/
+    font-weight: 400;
 }
 
 .title1 a {
     letter-spacing: 1px;
     color: #666;
-    padding-bottom: 7px;
 }
 
 .title1 a:hover {
@@ -114,22 +107,21 @@ li {
     color: #888;
 }
 
-.hljs {
-    background: #f7f7f7;
-}
-
 .main-header {
-    /*margin-bottom: 20px;*/
     height: 100px;
+    margin-bottom: 50px;
 }
 
 .main-logo-wrap {
-    margin-top: 33px;
+    margin-top: 34px;
     float: left;
     font-size: 18px;
 }
 
 .main-logo-wrap a {
+    background: #efefef;
+    color: #333;
+    padding: 0 7px;
 }
 
 .main-logo-wrap a:hover {
@@ -145,7 +137,6 @@ li {
 .main-header ul li {
     float: left;
     margin-right: 20px;
-    color: #444;
 }
 
 .main-header ul li a {
@@ -160,6 +151,7 @@ li {
 .main-footer {
     height: 300px;
     line-height: 300px;
+    text-align: center;
 }
 
 .gap {
@@ -202,24 +194,12 @@ td.code {
 }
 
 .article-directory ol.toc {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .article-directory li.toc-item {
     line-height: 30px;
-}
-
-.article-directory-hash {
-    font-size: 16px;
-    margin-right: 3px;
-    font-weight: 400;
-    color: #666;
-}
-
-.article-header {
-    /*border-bottom: 1px solid #efefef;*/
-    /*padding-bottom: 5px;*/
 }
 
 .article-header a {
@@ -232,7 +212,7 @@ td.code {
 
 .article-content, .tags-content {
     font-size: 14px;
-    padding: 20px 0 50px;
+    padding: 10px 0 50px;
 }
 
 .article-tag-link::before {
@@ -271,7 +251,7 @@ a.toc-link {
     font-size: 12px;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 550px) {
     .search-form {
         display: none;
     }
@@ -299,4 +279,8 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
+}
+
+.hljs {
+    background: #f7f7f7;
 }
