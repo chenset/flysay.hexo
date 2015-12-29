@@ -184,7 +184,7 @@ td.code {
 }
 
 .content-wrap a {
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1px solid #ccc;
 }
 
 .content-wrap h3, .content-wrap h4, .content-wrap h5, .content-wrap h6 {
@@ -242,6 +242,10 @@ td.code {
 
 .tags-content a {
     margin: 10px;
+}
+
+.tags-content a::before {
+    content: '# ';
 }
 
 a.toc-link {
