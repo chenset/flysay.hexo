@@ -16,7 +16,7 @@ url: http://flysay.com
 root: /
 permalink: :title.html
 permalink_defaults:
-static_url: http://s.flysay.com
+static_url: //s.flysay.com
 
 # Directory
 source_dir: source
