@@ -87,7 +87,7 @@ li {
 
 .title1, .title2 {
     margin: 10px 0;
-    color: #666;
+    color: #333;
     line-height: 1.5em;
     letter-spacing: 1px;
     font-size: 2em;
@@ -96,7 +96,7 @@ li {
 
 .title1 a {
     letter-spacing: 1px;
-    color: #666;
+    color: #333;
 }
 
 .title1 a:hover {
