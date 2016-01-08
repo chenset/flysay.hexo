@@ -70,7 +70,10 @@ theme: flysay
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://chenset@github.com/chenset/chenset.github.io.git
+  #repo: https://chenset@github.com/chenset/chenset.github.io.git
+  repo:
+    github: https://chenset@github.com/chenset/chenset.github.io.git,master
+    gitcafe: https://chenset@gitcafe.com/chenset/chenset.git,gitcafe-pages
   branch: master
 
 sitemap:
