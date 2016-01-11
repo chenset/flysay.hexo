@@ -108,7 +108,7 @@ CMD ["/bin/bash"]
 - -p 127.0.0.1:9000:9000 , 将host的127.0.0.1:9000绑定到container的9000端口
 - -v /path/to/project/:/path/to/project/ , 将host的项目目录mount到container的路径中, 使PHP可以访问到host的项目文件
 - --restart=always , container会开机自启动
-- d , 后台运行
+- -d , 后台运行
     
 ### 修改container(视情况可选)
 
