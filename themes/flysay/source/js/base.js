@@ -21,8 +21,22 @@ function loadingAnimate() {
         $secondLoadingEls.velocity("transition.slideDownIn", {
             drag: true, stagger: stagger
         });
+
+        toggleDuoshuoComments();
     }, $firstLoadingEls.length * stagger + 400);
 }
+
+function toggleDuoshuoComments() {
+    var dus = $(".ds-thread");
+    if (dus.length === 1) {
+        var el = document.createElement('div');
+        el.setAttribute('data-thread-key', dus.attr("data-thread-key"));
+        el.setAttribute('data-url', dus.attr("data-url"));
+        DUOSHUO.EmbedThread(el);
+        dus.html(el);
+    }
+}
+
 
 $(document)
     .on('click', '#scroll-to-top', function () {
@@ -56,14 +70,14 @@ $(document)
         $('#main-logo').addClass('active');
         loadingAnimate();
     }).on('click', 'a.toc-link', function () {
-        $("html, body").animate({
-            scrollTop: $($(this).attr("href")).offset().top + "px"
-        }, {
-            duration: 500,
-            easing: "swing"
-        });
-        return false;
+    $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top + "px"
+    }, {
+        duration: 500,
+        easing: "swing"
     });
+    return false;
+});
 
 $(function () {
     loadingAnimate();
