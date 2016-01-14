@@ -21,7 +21,7 @@ tags:
 - DHT22第3个引脚(负极) 接 树莓派第6个引脚 GUD
 
 <center>
-<img src="/image/P1010249.JPG!600"/>
+<img src="//flysay.com/image/P1010249.JPG!400"/>
 </center>
 
 ### 开始
