@@ -1,7 +1,7 @@
 title: 各类中国镜像源的收集(不断更新)
 tags:
 	- gwf
-
+date: 2015-12-20
 ---
 
 大连东软信息学院镜像站 <http://mirrors.neusoft.edu.cn/>  

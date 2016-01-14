@@ -3,6 +3,7 @@ tags:
 	- code
 	- more
 	- chinese
+date: 2015-12-01
 ---
 中文支持的怎么样呢.
 这里写的是文章主体
