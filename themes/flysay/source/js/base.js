@@ -1,6 +1,13 @@
 "use strict";
 function codeHL() {
-    $('figure, code').each(function (i, block) {
+    $('figure').each(function (i, block) {
+        hljs.configure({useBR: true});
+        hljs.highlightBlock(block);
+    });
+
+    $('code').each(function (i, block) {
+        $(block).addClass('bash');
+        hljs.configure({useBR: true});
         hljs.highlightBlock(block);
     });
 }
@@ -61,23 +68,19 @@ $(document)
     .on('pjax:beforeSend', '#pjax-container', function (event, setting, options) {
         $('#main-logo').removeClass('active');
     })
-
-    .on('pjax:success', '#pjax-container', function (event, data, status, xhr, options) {
-        codeHL();
-    })
-
     .on('pjax:end', '#pjax-container', function (event, data, status, xhr, options) {
         $('#main-logo').addClass('active');
+        codeHL();
         loadingAnimate();
     }).on('click', 'a.toc-link', function () {
-    $("html, body").animate({
-        scrollTop: $($(this).attr("href")).offset().top + "px"
-    }, {
-        duration: 500,
-        easing: "swing"
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+        return false;
     });
-    return false;
-});
 
 $(function () {
     loadingAnimate();

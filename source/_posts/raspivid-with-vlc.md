@@ -7,13 +7,13 @@ tags:
 
 IP: 10.0.0.120 为Windows端
 
-### 树莓派端
-
-    raspivid -t 999999 -hf -o - | socat - udp-datagram:10.0.0.120:8080
-
 ### Windows端
 
     vlc udp://@:8080 --demux=h264
+
+### 树莓派端
+
+    raspivid -t 999999 -hf -o - | socat - udp-datagram:10.0.0.120:8080
 
 ### 问题
 
