@@ -7,7 +7,7 @@ date: 2016-01-11
 
 ### Dockerfile
 
-```
+``` bash
 FROM ubuntu:latest  # 可以改为已经存在的ubuntu镜像, 如果没有, 则会下载ubunt镜像.
 
 MAINTAINER chenset, 4199191@qq.com
