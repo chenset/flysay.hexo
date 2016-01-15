@@ -21,7 +21,7 @@ function loadingAnimate() {
     $secondLoadingEls.hide();
 
     $firstLoadingEls.velocity("transition.slideDownIn", {
-        drag: true, stagger: stagger
+        drag: true
     });
 
     setTimeout(function () {
@@ -30,7 +30,7 @@ function loadingAnimate() {
         });
 
         toggleDuoshuoComments();
-    }, $firstLoadingEls.length * stagger + 400);
+    }, stagger + 300);
 }
 
 function toggleDuoshuoComments() {
@@ -44,6 +44,13 @@ function toggleDuoshuoComments() {
     }
 }
 
+function headerAnimateCtrl() {
+    if ($(document).scrollTop() > 20) {
+        $('.main-header').addClass('animation');
+    } else {
+        $('.main-header').removeClass('animation');
+    }
+}
 
 $(document)
     .on('click', '#scroll-to-top', function () {
@@ -52,8 +59,10 @@ $(document)
 
     .on('scroll', function () {
         clearTimeout(window._scrollTimeoutTimer);
+        headerAnimateCtrl();
         window._scrollTimeoutTimer = setTimeout(function () {
-            if ($(document).scrollTop() > 500) {
+            var distance = $(document).scrollTop();
+            if (distance > 500) {
                 $('#scroll-to-top:hidden').velocity("transition.slideDownIn", {
                     drag: true, stagger: 150
                 });
@@ -62,7 +71,7 @@ $(document)
                     drag: true, stagger: 150
                 });
             }
-        }, 300);
+        }, 100);
     })
 
     .on('pjax:beforeSend', '#pjax-container', function (event, setting, options) {
@@ -83,6 +92,7 @@ $(document)
     });
 
 $(function () {
+    headerAnimateCtrl();
     loadingAnimate();
     $('#main-logo').addClass('active');
     codeHL();
