@@ -124,7 +124,7 @@ li {
 .main-header {
     width: 100%;
     position: fixed;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     z-index: 9999;
     margin-top: 30px;
 }
@@ -142,7 +142,6 @@ li {
 
 .main-logo-wrap a {
     color: #333;
-    padding: 0 7px;
 }
 
 .main-header.animation .main-logo-wrap a, .main-header.animation ul li a {
