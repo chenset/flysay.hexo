@@ -258,6 +258,11 @@ td.code {
     color: #333;
 }
 
+.content-wrap img {
+    max-width: 100%;
+    height: auto;
+}
+
 .article-directory {
     background: #F7F7F7;
     border: 1px dashed #666;
