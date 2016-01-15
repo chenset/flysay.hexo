@@ -147,7 +147,7 @@ li {
 
 .main-header.animation .main-logo-wrap a, .main-header.animation ul li a {
     color: #eee;
-    background: #333;
+    background: transparent;
 }
 
 .main-header.animation .search-form-input {
