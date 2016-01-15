@@ -135,12 +135,12 @@ li {
 }
 
 .main-logo-wrap {
+    margin-right: 30px;
     float: left;
     font-size: 18px;
 }
 
 .main-logo-wrap a {
-    background: #efefef;
     color: #333;
     padding: 0 7px;
 }
@@ -163,6 +163,7 @@ li {
 
 .main-header ul {
     float: left;
+    padding-left: 0;
     margin: 0;
     display: inline-block;
 }
