@@ -82,7 +82,7 @@ $(document)
         codeHL();
         loadingAnimate();
     }).on('click', 'a.toc-link', function () {
-        $("html, body").animate({
+        $("html, body").stop().animate({
             scrollTop: $($(this).attr("href")).offset().top + "px"
         }, {
             duration: 500,

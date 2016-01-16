@@ -74,6 +74,11 @@ body {
     backface-visibility: hidden;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
 *:focus {
     outline: none;
 }
@@ -161,10 +166,7 @@ li {
 }
 
 .main-header ul {
-    float: left;
-    padding-left: 0;
-    margin: 0;
-    display: inline-block;
+    margin-left: 20px;
 }
 
 .main-header ul li {
@@ -264,13 +266,11 @@ td.code {
 }
 
 .article-directory {
-    background: #F7F7F7;
-    border: 1px dashed #666;
+    border: 1px dashed #999;
 }
 
 .article-directory ol.toc {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px 30px;
 }
 
 .article-directory li.toc-item {
