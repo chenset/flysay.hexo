@@ -19,6 +19,7 @@
 
     <% if(toc(post.content)){ %>
     <div class="article-directory">
+        <span class="toc-icon">#</span>
         <%- toc(post.content) %>
     </div>
     <% } %>
@@ -36,7 +37,7 @@
         this.page.identifier = '<%= post.layout %>-<%= post.slug %>';
     };
 
-    (function() { // DON'T EDIT BELOW THIS LINE
+    (function () {
         var d = document, s = d.createElement('script');
 
         s.src = '//flysay.disqus.com/embed.js';

@@ -28,9 +28,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <%- css(
-            config.static_url + '/css/bootstrap.min.css',
-            config.static_url + '/js/highlightjs/styles/default.css',
-           '/css/base.css'
+            '/css/bootstrap.min.css',
+            '/js/highlightjs/styles/default.css',
+            '/css/base.css'
     ) %>
     <% if(is_home()){ %>
     <link rel="canonical" href="<%= config.url %>"/>
@@ -65,12 +65,12 @@
     <i class="icon iconfont icon-up"></i>
 </div>
 <%- js(
-        config.static_url + '/js/jquery-1.11.3.min.js',
-        config.static_url + '/js/velocity.min.js',
-        config.static_url + '/js/velocity.ui.min.js',
-       '/js/base.js',
-        config.static_url + '/js/jquery.pjax.min.js',
-        config.static_url + '/js/highlightjs/highlight.pack.js'
+        '/js/jquery-1.11.3.min.js',
+        '/js/velocity.min.js',
+        '/js/velocity.ui.min.js',
+        '/js/base.js',
+        '/js/jquery.pjax.min.js',
+        '/js/highlightjs/highlight.pack.js'
 ) %>
 </body>
 </html>

@@ -228,6 +228,8 @@ figure pre {
 
 .hljs, code {
     background: #f7f7f7;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 td.gutter {
@@ -265,6 +267,13 @@ td.code {
     border: 1px dashed #999;
 }
 
+.article-directory .toc-icon {
+    float: right;
+    margin-right: 14px;
+    font-size: 26px;
+    color: #41B883;
+}
+
 .article-directory ol.toc {
     padding: 20px 30px;
 }
@@ -283,26 +292,29 @@ td.code {
     padding: 10px 0 50px;
 }
 
-.article-content a, .tags-content a {
+.article-content h2:before, h3:before, h4:before, h5:before, h6:before {
+    content: '#';
+    margin: 0 5px 0 -15px;
+    color: #41B883;
+}
+
+.article-content a {
+    border-bottom: 1px solid #41B883;
+    color:#41B883;
+    font-weight:600;
+}
+
+.tags-content a {
     border-bottom: 1px solid #ccc;
 }
 
-.article-content a:hover, .tags-content a:hover {
+ .tags-content a:hover {
     border-bottom-color: #333;
     color: #333;
 }
 
-.article-tag-link::before {
-    content: ' # ';
-    font-size: 12px;
-}
-
 .tags-content a {
     margin: 10px;
-}
-
-.tags-content a::before {
-    content: '# ';
 }
 
 .scroll-to-top {
