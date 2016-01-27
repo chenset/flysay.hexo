@@ -92,7 +92,9 @@ EXPOSE 9000  # 默认的php-fpm端口
 CMD ["/bin/bash"]
 ```
 
-保存名为dockerfile文件
+保存名为dockerfile文件   
+
+<end></end>
 
 ### 创建镜像
 

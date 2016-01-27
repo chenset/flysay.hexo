@@ -25,10 +25,20 @@
     <% } %>
     <% } %>
     <div class="article-content">
-        <%- post.content %>
-    </div>
-</article>
+        <% var content_str = post.content.indexOf('<end></end>') %>
+        <% if (index && content_str > 0){ %>
+        <%- truncate(post.content, {
+            'length': content_str,
+            omission: ''
+        }) %>
 
+        <% }else{ %>
+        <%- post.content %>
+        <% } %>
+    </div>
+
+
+</article>
 <% if (!index && post.comments){ %>
 <div id="disqus_thread"></div>
 <script>
