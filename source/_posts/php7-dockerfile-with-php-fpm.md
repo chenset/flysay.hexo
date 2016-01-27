@@ -4,6 +4,12 @@ tags:
 	- php
 date: 2016-01-11
 ---
+### 介绍
+
+通过使用docker的Dockerfile文件能够非常方便的生成指定的运行环境.
+下面将要介绍的是使用Dockerfile文件一键生成的PHP7执行环境.
+
+<end></end>
 
 ### Dockerfile
 
@@ -94,7 +100,6 @@ CMD ["/bin/bash"]
 
 保存名为dockerfile文件   
 
-<end></end>
 
 ### 创建镜像
 

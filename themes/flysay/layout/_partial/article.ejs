@@ -24,20 +24,24 @@
     </div>
     <% } %>
     <% } %>
-    <div class="article-content">
-        <% var content_str = post.content.indexOf('<end></end>') %>
-        <% if (index && content_str > 0){ %>
-        <%- truncate(post.content, {
-            'length': content_str,
-            omission: ''
-        }) %>
+    <div><!-- 非多余! -->
+        <div class="article-content <%-index?" index ":""%>">
+            <% var content_str = post.content.indexOf('<end></end>') %>
+            <% if (index && content_str > 0){ %>
+            <%- truncate(post.content, {
+                'length': content_str,
+                omission: ''
+            }) %>
 
-        <% }else{ %>
-        <%- post.content %>
-        <% } %>
+            <% }else{ %>
+            <%- post.content %>
+            <% } %>
+        </div>
     </div>
 
-
+    <% if (index && content_str > 0){ %>
+    <a class="read-more" href="<%- url_for(post.path) %>">Read More</a>
+    <% } %>
 </article>
 <% if (!index && post.comments){ %>
 <div id="disqus_thread"></div>

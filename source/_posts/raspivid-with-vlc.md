@@ -9,7 +9,11 @@ IP: 10.0.0.120 为Windows端
 
 ### Windows端
 
-    vlc udp://@:8080 --demux=h264
+``` bash  
+vlc udp://@:8080 --demux=h264
+```
+
+<end></end>
 
 ### 树莓派端
 

@@ -28,6 +28,7 @@ describe('type: name', function () {
 });
 ```
 
+<end></end>
 
 ### 哈哈哈哈
 ``` bash

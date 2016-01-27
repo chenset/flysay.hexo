@@ -287,6 +287,10 @@ td.code {
     margin-bottom: 13px;
 }
 
+.article-content.index {
+    border-bottom: 1px solid #EBEEEF;
+}
+
 .article-content, .tags-content {
     font-size: 14px;
     padding: 10px 0 50px;
@@ -294,21 +298,27 @@ td.code {
 
 .article-content h2:before, h3:before, h4:before, h5:before, h6:before {
     content: '#';
-    margin: 0 5px 0 0px;
+    margin-right: 5px;
     color: #41B883;
 }
 
-.article-content a {
+.article-content a, .read-more, .read-more:hover {
     border-bottom: 1px solid #41B883;
-    color:#41B883;
-    font-weight:600;
+    color: #41B883;
+    font-weight: 600;
+}
+
+.read-more {
+    position: relative;
+    top: -23px;
+    border-bottom: none;
 }
 
 .tags-content a {
     border-bottom: 1px solid #ccc;
 }
 
- .tags-content a:hover {
+.tags-content a:hover {
     border-bottom-color: #333;
     color: #333;
 }
