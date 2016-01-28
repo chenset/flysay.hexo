@@ -118,6 +118,12 @@ li {
     font-weight: 400;
 }
 
+.title1:before, .title2:before {
+    content: '·';
+    margin-right: 10px;
+    font-weight: 800;
+}
+
 .title1 a {
     letter-spacing: 1px;
     color: #333;
@@ -351,4 +357,29 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
+}
+
+.page-nav {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.page-nav .extend, .page-nav .info {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    background: #eee;
+    color: #bbb;
+    padding: 0;
+    margin: 0;
+}
+
+.page-nav .prev, .page-nav .next {
+    color: #666;
+}
+
+.page-nav .prev:hover, .page-nav .next:hover {
+    background: #41B883;
+    color: #fff;
 }

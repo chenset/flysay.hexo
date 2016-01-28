@@ -1,8 +1,19 @@
 <% if (page.prev || page.next){ %>
 <nav class="page-nav">
-    <%- paginator({
-        prev_text: '上一页',
-        next_text: '下一页'
-    }) %>
+
+    <% if(page.prev){ %>
+    <a class="extend prev" href="/<%- page.prev_link %>">上一页</a>
+    <% }else{ %>
+    <span class="extend">上一页</span>
+    <% } %>
+
+    <span class="info"><%- page.current %>/<%- page.total %></span>
+
+    <% if(page.next){ %>
+    <a class="extend next" href="/<%- page.next_link %>">下一页</a>
+    <% }else{ %>
+    <span class="extend">下一页</span>
+    <% } %>
+
 </nav>
 <% } %>
