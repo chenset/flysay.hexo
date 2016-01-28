@@ -13,7 +13,7 @@ function codeHL() {
 }
 
 function loadingAnimate() {
-    var $firstLoadingEls = $('article'),
+    var $firstLoadingEls = $('#main-container'),
         $secondLoadingEls = $('.main-header a,.main-header input,#footer-content'),
         stagger = 150;
 

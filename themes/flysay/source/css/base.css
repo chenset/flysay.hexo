@@ -58,7 +58,7 @@
 /* Effect 4: bottom border enlarge End*/
 
 /*For pjax*/
-article, .main-header a, .main-header input, #footer-content {
+#main-container, .main-header a, .main-header input, #footer-content {
     visibility: hidden;
 }
 
