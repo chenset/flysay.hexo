@@ -76,8 +76,10 @@ $(document)
 
     .on('pjax:beforeSend', '#pjax-container', function (event, setting, options) {
         $('#main-logo').removeClass('active');
+        $(document.body).animate({'opacity': 0.5});
     })
     .on('pjax:end', '#pjax-container', function (event, data, status, xhr, options) {
+        $(document.body).stop().css({'opacity': 1});
         $('#main-logo').addClass('active');
         codeHL();
         loadingAnimate();
