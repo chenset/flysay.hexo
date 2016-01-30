@@ -114,14 +114,12 @@ li {
     color: #333;
     line-height: 1.5em;
     letter-spacing: 1px;
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: 400;
 }
 
-.title1:before, .title2:before {
-    content: '·';
-    margin-right: 10px;
-    font-weight: 800;
+.title3{
+    text-align: center;
 }
 
 .title1 a {
@@ -217,8 +215,7 @@ li {
 }
 
 .main-footer {
-    height: 300px;
-    line-height: 300px;
+   padding: 200px 0 50px;
     text-align: center;
 }
 
@@ -320,17 +317,19 @@ td.code {
     border-bottom: none;
 }
 
+.tags-content{
+    text-align: center;
+}
+
 .tags-content a {
     border-bottom: 1px solid #ccc;
+    margin: 10px;
+    display: inline-block;
 }
 
 .tags-content a:hover {
     border-bottom-color: #333;
-    color: #333;
-}
-
-.tags-content a {
-    margin: 10px;
+    color: #333 !important;
 }
 
 .scroll-to-top {

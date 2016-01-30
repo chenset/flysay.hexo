@@ -2,11 +2,17 @@
     <div class="row">
         <div class="col-md-12">
             <article class="article">
-                <header class="article-header text-left">
-                    <h2 class="title2"><%- page.title %></h2>
+                <header class="article-header">
+                    <h2 class="title2 title3"><%- page.title %></h2>
                 </header>
                 <div class="tags-content">
-                    <%- tagcloud({min_font: 12, max_font: 30}) %>
+                    <%- tagcloud({
+                        min_font: 12,
+                        max_font: 26,
+                        color:true,
+                        end_color:'black',
+                        start_color:'lightGray'
+                    }) %>
                 </div>
             </article>
 

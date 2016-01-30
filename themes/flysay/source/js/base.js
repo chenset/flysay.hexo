@@ -84,14 +84,13 @@ $(document)
         codeHL();
         loadingAnimate();
     }).on('click', 'a.toc-link', function () {
-        $("html, body").stop().animate({
-            scrollTop: $($(this).attr("href")).offset().top + "px"
-        }, {
-            duration: 500,
-            easing: "swing"
-        });
-        return false;
+    $("html, body").stop().animate({
+        scrollTop: $($(this).attr("href")).offset().top - 50 + "px"
+    }, {
+        duration: 500,
+        easing: "swing"
     });
+});
 
 $(function () {
     headerAnimateCtrl();
