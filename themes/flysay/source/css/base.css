@@ -215,7 +215,8 @@ li {
 }
 
 .main-footer {
-   padding: 200px 0 50px;
+    padding-top: 180px;
+    height: 300px;
     text-align: center;
 }
 
