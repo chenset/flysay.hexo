@@ -73,8 +73,9 @@ deploy:
   #repo: https://chenset@github.com/chenset/chenset.github.io.git
   repo:
     github: https://chenset@github.com/chenset/chenset.github.io.git,master
-    coding: https://chenset@git.coding.net/chenset/chenset.git,coding-pages
+    coding: https://chenset@git.coding.net/chenset/chenset.git,master
   branch: master
 
 sitemap:
   path: sitemap.xml
+  
