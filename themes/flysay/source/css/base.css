@@ -198,9 +198,7 @@ li {
     }
     .title1, .title2 {
         line-height: 1.3em;
-        letter-spacing: 1px;
         font-size: 1.3em;
-        font-weight: 400;
     }
 }
 
