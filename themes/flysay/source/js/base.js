@@ -29,19 +29,7 @@ function loadingAnimate() {
             drag: true, stagger: stagger
         });
 
-        toggleDuoshuoComments();
     }, stagger + 300);
-}
-
-function toggleDuoshuoComments() {
-    var dus = $(".ds-thread");
-    if (dus.length === 1) {
-        var el = document.createElement('div');
-        el.setAttribute('data-thread-key', dus.attr("data-thread-key"));
-        el.setAttribute('data-url', dus.attr("data-url"));
-        DUOSHUO.EmbedThread(el);
-        dus.html(el);
-    }
 }
 
 function headerAnimateCtrl() {
@@ -76,10 +64,10 @@ $(document)
 
     .on('pjax:beforeSend', '#pjax-container', function (event, setting, options) {
         $('#main-logo').removeClass('active');
-        $(this).animate({'opacity': 0.5});
+        $('.layer-full').fadeIn();
     })
     .on('pjax:end', '#pjax-container', function (event, data, status, xhr, options) {
-        $(this).stop().css({'opacity': 1});
+        $('.layer-full').hide();
         $('#main-logo').addClass('active');
         codeHL();
         loadingAnimate();
