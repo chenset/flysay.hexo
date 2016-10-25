@@ -25,7 +25,7 @@ date: 2016-10-23
 
 ``` bash
 cd X:\boost_1_62_0\tools\build\src\engine  # 各个版本路径会不同, 主要定位到build.bat
-.\build.bat gcc --toolset-root="X:\mingw\bin"
+.\build.bat mingw --toolset-root="X:\mingw\bin"
 
 ```
 将编译后的b2.exe和bjam.exe复制到boost根目录.
@@ -35,7 +35,7 @@ cd X:\boost_1_62_0\tools\build\src\engine  # 各个版本路径会不同, 主要
 
 ``` bash
 cd X:\boost_1_62_0\
-.\b2.exe install toolset=gcc --prefix=X:\boost_mingw # --prefix 为类库生成地址
+.\b2.exe install toolset=gcc --prefix=X:\boost_mingw # --prefix 为类库生成地址, 不指定路径则安装在c:\boost
 
 ```
 
