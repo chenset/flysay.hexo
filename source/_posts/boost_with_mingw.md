@@ -44,7 +44,7 @@ cd X:\boost_1_62_0\
 
 ### CMakeLists.txt
 
-``` bash
+``` 
 cmake_minimum_required(VERSION 3.3)
 project(first)
 

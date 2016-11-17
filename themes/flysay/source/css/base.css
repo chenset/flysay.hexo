@@ -250,7 +250,7 @@ td.gutter {
 
 td.gutter, td.code, code {
     line-height: 1.5em;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 td.code {
@@ -264,6 +264,7 @@ td.code {
 .content-wrap h3, .content-wrap h4, .content-wrap h5, .content-wrap h6 {
     font-weight: 600;
     color: #333;
+    font-size: 1em;
 }
 
 .content-wrap img {
@@ -300,7 +301,7 @@ td.code {
 }
 
 .article-content, .tags-content {
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 0 50px;
 }
 
