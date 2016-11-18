@@ -32,19 +32,25 @@ date: 2016-01-06
 
 更新系统
 
+```
     apt-get update
     apt-get upgrade
+```
     
 安装必要的依赖
 
+```
     apt-get install build-essential python-dev        
+```
 
 使用adafruit/Adafruit_Python_DHT包
 
+```
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git
     cd ./Adafruit_Python_DHT
     python setup.py install
-    
+```
+
 读取温度的Python代码
 
 ``` python

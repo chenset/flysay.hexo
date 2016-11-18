@@ -34,5 +34,5 @@ describe('type: name', function () {
 ``` bash
 $echo 123;
 $sudo -i root > /dev/null
-```i
+```
 

@@ -103,12 +103,15 @@ CMD ["/bin/bash"]
 
 ### 创建镜像
 
-    docker build -f /path/to/dockerfile -t php7 . # (注意后面的"."也要复制) 创建镜像
-    
+``` bash
+    docker build -f /path/to/dockerfile -t php7 . # (注意后面的"."也要复制) 创建镜像   
+```
 
 ### 运行
 
+``` bash
     docker run -p 127.0.0.1:9000:9000 -v /path/to/project/:/path/to/project/ --restart=always -d php7 /usr/local/php7/sbin/php-fpm -F
+```
 
 参数解释     
 
@@ -116,23 +119,31 @@ CMD ["/bin/bash"]
 - -v /path/to/project/:/path/to/project/ , 将host的项目目录mount到container的路径中, 使PHP可以访问到host的项目文件
 - --restart=always , container会开机自启动
 - -d , 后台运行
-    
+
 ### 修改container(视情况可选)
 
 运行container
 
+```
     docker run -it php7
-    
+```
+
 修改php-fpm的配置文件
 
+```
     vi /usr/local/php7/etc/php-fpm.d/www.conf  # 将listen = 127.0.0.1:9000 该为 listen = 9000. 使host可以访问container中的php-fpm
+```
 
 另外开启一个ssh提交容器修改, 类似数据库的事务机制. 每次运行一次container都类似于开启了一个事务. 当container发生修改则必须commit才能使变更生效.
 
+```
     docker ps  # 查看container ID
     docker commit <CONTAINER_ID> php7
+```
     
 ### 进入container的bash(可选)
 
+```
     docker ps  # 查看container ID
     docker exec -i -t <CONTANER_ID> bash
+```

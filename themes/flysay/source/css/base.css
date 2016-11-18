@@ -145,7 +145,7 @@ li {
 
 .main-header.animation {
     margin-top: 0;
-    background: #333;
+    background: #222;
 }
 
 .main-logo-wrap {
@@ -196,6 +196,7 @@ li {
     .search-form {
         display: none;
     }
+
     .title1, .title2 {
         line-height: 1.3em;
         font-size: 1.3em;
@@ -230,31 +231,19 @@ li {
     font-weight: 800;
 }
 
-figure pre {
-    margin: 0;
-}
+figure, .hljs, code {
 
-.hljs, code {
-    background: #f7f7f7;
+    background: #1e2328;
+    padding: 10px 20px;
     margin-top: 5px;
     margin-bottom: 15px;
+    overflow-x: auto;
 }
 
-td.gutter {
-    color: #9D2E2E;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-right: 1px solid #e9e9e9;
-    line-height: 1em;
-}
-
-td.gutter, td.code, code {
-    line-height: 1.5em;
-    font-size: 14px;
-}
-
-td.code {
-    padding-left: 8px;
+figure pre, code pre {
+    font-family: Arial, sans-serif, "Microsoft YaHei", 'Helvetica Neue', Helvetica;
+    color: #f8f8f2;
+    font-size:14px;
 }
 
 .content-wrap {
@@ -272,7 +261,7 @@ td.code {
 }
 
 .article-directory {
-    border: 1px dashed #999;
+    border: 1px dashed #4f4f4f;
 }
 
 .article-directory .toc-icon {

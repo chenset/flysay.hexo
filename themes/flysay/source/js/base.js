@@ -1,16 +1,4 @@
 "use strict";
-function codeHL() {
-    $('figure').each(function (i, block) {
-        hljs.configure({useBR: true});
-        hljs.highlightBlock(block);
-    });
-
-    $('code').each(function (i, block) {
-        $(block).addClass('bash');
-        hljs.configure({useBR: true});
-        hljs.highlightBlock(block);
-    });
-}
 
 function loadingAnimate() {
     var $firstLoadingEls = $('#main-container'),
@@ -69,7 +57,6 @@ $(document)
     .on('pjax:end', '#pjax-container', function (event, data, status, xhr, options) {
         $('.layer-full').hide();
         $('#main-logo').addClass('active');
-        codeHL();
         loadingAnimate();
     }).on('click', 'a.toc-link', function () {
     $("html, body").stop().animate({
@@ -84,7 +71,6 @@ $(function () {
     headerAnimateCtrl();
     loadingAnimate();
     $('#main-logo').addClass('active');
-    codeHL();
     $(document).pjax('a', '#pjax-container', {
         fragment: '#pjax-container',
         timeout: 5000,
