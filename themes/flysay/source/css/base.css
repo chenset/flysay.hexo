@@ -241,9 +241,9 @@ figure, .hljs, code {
 }
 
 figure pre, code pre {
-    font-family: inherit;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace, Arial, sans-serif;
     color: #f8f8f2;
-    font-size: inherit;
+    font-size: 0.8em;
 }
 
 .content-wrap {
