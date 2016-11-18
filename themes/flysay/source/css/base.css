@@ -41,7 +41,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background: #666;
+    background: #444;
     content: '';
     opacity: 0;
     transition: height 0.3s, opacity 0.3s, transform 0.3s;
@@ -66,7 +66,7 @@ body {
     position: relative;
     font-family: Arial, "Microsoft YaHei", 'Helvetica Neue', Helvetica, sans-serif;
     line-height: 2;
-    color: #666;
+    color: #444;
     /*background: #f1f4f6;*/
     word-wrap: break-word;
     -webkit-tap-highlight-color: transparent;
@@ -88,7 +88,7 @@ body {
 }
 
 a {
-    color: #666;
+    color: #444;
     text-decoration: none !important;
 }
 
@@ -111,7 +111,7 @@ li {
 
 .title1, .title2 {
     margin: 10px 0;
-    color: #333;
+    color: #222;
     line-height: 1.5em;
     letter-spacing: 1px;
     font-size: 1.6em;
@@ -124,11 +124,11 @@ li {
 
 .title1 a {
     letter-spacing: 1px;
-    color: #333;
+    color: #222;
 }
 
 .title1 a:hover {
-    color: #333 !important;
+    color: #222 !important;
 }
 
 .text-muted {
@@ -145,7 +145,7 @@ li {
 
 .main-header.animation {
     margin-top: 0;
-    background: #333;
+    background: #222;
 }
 
 .main-logo-wrap {
@@ -155,7 +155,7 @@ li {
 }
 
 .main-logo-wrap a {
-    color: #333;
+    color: #222;
 }
 
 .main-header.animation .main-logo-wrap a, .main-header.animation ul li a {
@@ -206,7 +206,7 @@ li {
     float: right;
     height: 20px;
     line-height: 20px;
-    color: #666;
+    color: #444;
     margin-top: 7px;
     width: 150px;
     padding-right: 22px;
@@ -263,7 +263,7 @@ td.code {
 
 .content-wrap h3, .content-wrap h4, .content-wrap h5, .content-wrap h6 {
     font-weight: 600;
-    color: #333;
+    color: #222;
     font-size: 1em;
 }
 
@@ -334,8 +334,8 @@ td.code {
 }
 
 .tags-content a:hover {
-    border-bottom-color: #333;
-    color: #333 !important;
+    border-bottom-color: #222;
+    color: #222 !important;
 }
 
 .scroll-to-top {
@@ -350,7 +350,7 @@ td.code {
     background: #dfdfdf;
     border-radius: 50%;
     text-align: center;
-    color: #666;
+    color: #444;
 }
 
 .scroll-to-top i {
@@ -381,7 +381,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .page-nav .prev, .page-nav .next {
-    color: #666;
+    color: #444;
 }
 
 .page-nav .prev:hover, .page-nav .next:hover {
