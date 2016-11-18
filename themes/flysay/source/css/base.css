@@ -66,7 +66,8 @@ body {
     position: relative;
     font-family: Arial, "Microsoft YaHei", 'Helvetica Neue', Helvetica, sans-serif;
     line-height: 2;
-    color: #666;
+    color: #444;
+    font-size: 14px;
     /*background: #f1f4f6;*/
     word-wrap: break-word;
     -webkit-tap-highlight-color: transparent;
@@ -151,7 +152,7 @@ li {
 .main-logo-wrap {
     margin-right: 30px;
     float: left;
-    font-size: 18px;
+    font-size: 1.3em;
 }
 
 .main-logo-wrap a {
@@ -232,18 +233,17 @@ li {
 }
 
 figure, .hljs, code {
-
     background: #1e2328;
     padding: 10px 20px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 35px;
     overflow-x: auto;
 }
 
 figure pre, code pre {
-    font-family: Arial, sans-serif, "Microsoft YaHei", 'Helvetica Neue', Helvetica;
+    font-family: inherit;
     color: #f8f8f2;
-    font-size:14px;
+    font-size: inherit;
 }
 
 .content-wrap {
@@ -261,13 +261,14 @@ figure pre, code pre {
 }
 
 .article-directory {
+    margin: 50px 0;
     border: 1px dashed #4f4f4f;
 }
 
 .article-directory .toc-icon {
     float: right;
-    margin-right: 14px;
-    font-size: 26px;
+    margin-right: 20px;
+    font-size: 3em;
     color: #41B883;
 }
 
@@ -289,7 +290,7 @@ figure pre, code pre {
 }
 
 .article-content, .tags-content {
-    font-size: 14px;
+    font-size: 1.1em;
     padding: 10px 0 50px;
 }
 
@@ -342,7 +343,7 @@ figure pre, code pre {
 }
 
 .scroll-to-top i {
-    font-size: 12px;
+    font-size: 1em;
 }
 
 input[type="search"]::-webkit-search-decoration,
