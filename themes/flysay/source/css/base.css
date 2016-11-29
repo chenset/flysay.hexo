@@ -156,7 +156,7 @@ li {
 }
 
 .main-logo-wrap a {
-    color: #333;
+    font-size:1.4em;
 }
 
 .main-header.animation .main-logo-wrap a, .main-header.animation ul li a {
@@ -185,7 +185,7 @@ li {
 }
 
 .main-header ul li a {
-    padding: 4px 12px;
+    padding: 12px 12px;
 }
 
 .main-header ul li a:hover {
@@ -209,7 +209,7 @@ li {
     height: 20px;
     line-height: 20px;
     color: #666;
-    margin-top: 7px;
+    margin-top: 14px;
     width: 150px;
     padding-right: 22px;
     border: 1px solid transparent;
