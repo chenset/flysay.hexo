@@ -1,8 +1,6 @@
 title: 中文的支持
 tags:
-	- code
-	- more
-	- chinese
+	- Test 
 date: 2015-12-01
 ---
 中文支持的怎么样呢.

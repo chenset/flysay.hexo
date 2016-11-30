@@ -1,9 +1,10 @@
 title: 在Docker中一键安装PHP7
 tags:
-	- docker
-	- php
+	- Docker
+	- PHP 
 date: 2016-01-11
 ---
+
 ### 介绍
 
 通过使用docker的Dockerfile文件能够非常方便的生成指定的运行环境.

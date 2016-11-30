@@ -1,6 +1,6 @@
 title: ubuntu64位执行迅雷远程下载固件
 tags:
-	- linux
+	- Linux
 date: 2016-05-24
 ---
 ### 介绍
