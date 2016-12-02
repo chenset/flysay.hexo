@@ -40,6 +40,29 @@ date: 2016-12-01
 GPIO0接GND为烧录模式, 是必接的
 所有GND都必须供用独立供电的GND
 
+### 烧录
+
+烧录可以使用 Arduino IDE +  [Arduino core for ESP8266 WiFi chip](https://github.com/esp8266/Arduino) 或者 [PlatformIO](http://platformio.org/) (推荐).   
+
+[Arduino core for ESP8266 WiFi chip](https://github.com/esp8266/Arduino) 中有OTA的示例, 可以直接烧录测试   
+或者随便烧录一段代码测试.   
+
+```
+
+void setup(){
+
+}
+
+void loop(){
+
+}
+
+```
+
+
+
+
+
 ### 其他
 
 每次接线烧录都比较复杂, 所有自己焊接了一个烧录平台.
