@@ -5,15 +5,19 @@
                 <header class="article-header">
                     <h2 class="title2 title3"><%- page.title %></h2>
                 </header>
-                <div class="tags-content">
-                    <%- tagcloud({
-                        min_font: 12,
-                        max_font: 26,
-                        color:true,
-                        end_color:'black',
-                        start_color:'lightGray'
-                    }) %>
-                </div>
+
+                <% if (is_current('about') ){ %>
+                    <%- partial('about.ejs',{post:page}) %>
+                <% } %>
+
+                <% if (is_current('links') ){ %>
+                    <%- partial('links.ejs',{post:page}) %>
+                <% } %>
+
+                <% if (is_current('tags') ){ %>
+                    <%- partial('tags.ejs') %>
+                <% } %>
+
             </article>
 
         </div>
