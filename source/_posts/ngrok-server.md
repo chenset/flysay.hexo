@@ -33,5 +33,5 @@ tunnels:
 ```
 
 ```
-./ngrok -config=./config.ini start flysay  # 开启名为flysay的穿透
+./ngrok -log=stdout -config=./config.ini start flysay  # 开启名为flysay的穿透 . -log=stdout加上该参数才能后台运行
 ```
