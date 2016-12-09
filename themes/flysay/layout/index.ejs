@@ -1,7 +1,7 @@
 <div class="container content-wrap">
 
     <% page.posts.each(function(page){ %>
-    <%- partial('_partial/article', {post: page, index: true}) %>
+    <%- partial('_partial/list.ejs', {post: page, index: true}) %>
     <% }) %>
 
     <%- partial('_partial/pagination', {page: page}) %>

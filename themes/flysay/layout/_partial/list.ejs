@@ -1,0 +1,25 @@
+<article class="article">
+    <header class="article-header text-left">
+        <h2 class="title1 cl-effect-4"><a class="" href="<%- url_for(post.path) %>"><%- titlecase(post.title) %></a></h2>
+    </header>
+    <div class="article-meta text-muted">
+        <%- date(post.date, 'M月D日, YYYY') %>
+        <b class="gap">/</b>
+        <%- list_tags(post.tags, {
+            show_count: false,
+            style: '',
+            class: 'text-muted article-tag'
+        }) %>
+    </div>
+    <div><!-- 非多余! -->
+        <div class="article-content index">
+            <% var content_str = post.content.indexOf('<end></end>') %>
+            <%- truncate(post.content, {
+                'length': content_str,
+                omission: ''
+            }) %>
+        </div>
+    </div>
+
+    <a class="read-more" href="<%- url_for(post.path) %>">Read More</a>
+</article>

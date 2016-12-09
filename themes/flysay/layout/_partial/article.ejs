@@ -1,10 +1,6 @@
 <article class="article">
     <header class="article-header text-left">
-        <% if(index){ %>
-        <h2 class="title1 cl-effect-4"><a class="" href="<%- url_for(post.path) %>"><%- titlecase(post.title) %></a></h2>
-        <% }else{ %>
         <h1 class="title2"><%- titlecase(post.title) %></h1>
-        <% } %>
     </header>
     <div class="article-meta text-muted">
         <%- date(post.date, 'M月D日, YYYY') %>
@@ -15,7 +11,6 @@
             class: 'text-muted article-tag'
         }) %>
     </div>
-    <% if(is_post()){ %>
 
     <% if(toc(post.content)){ %>
     <div class="article-directory">
@@ -23,27 +18,13 @@
         <%- toc(post.content) %>
     </div>
     <% } %>
-    <% } %>
     <div><!-- 非多余! -->
-        <div class="article-content <%-index?" index ":""%>">
-            <% var content_str = post.content.indexOf('<end></end>') %>
-            <% if (index && content_str > 0){ %>
-            <%- truncate(post.content, {
-                'length': content_str,
-                omission: ''
-            }) %>
-
-            <% }else{ %>
+        <div class="article-content">
             <%- post.content %>
-            <% } %>
         </div>
     </div>
-
-    <% if (index && content_str > 0){ %>
-    <a class="read-more" href="<%- url_for(post.path) %>">Read More</a>
-    <% } %>
 </article>
-<% if (!index && post.comments){ %>
+<% if (post.comments){ %>
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
