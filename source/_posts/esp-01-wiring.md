@@ -32,7 +32,7 @@ date: 2016-12-01
 
 <center>
 网上的图片, 并稍作修改. 其中10K和2K电阻是可选的
-<img src="/image/esp01_with_FTDI.jpg"/>   
+<img src="//flysay.com/image/esp01_with_FTDI.jpg!400"/>   
 </center>
    
 #### 注意
@@ -65,8 +65,8 @@ void loop(){
 当然ESP8266支持OTA功能, 这个自制平台只用于第一次烧录和OTA失败的情况.   
 
 <center>
-<img src="/image/ESP8266_IMG_0366.jpg"/>   
-<img src="/image/ESP8266_IMG_0367.jpg"/>   
-<img src="/image/ESP8266_IMG_0368.jpg"/>   
+<img src="//flysay.com/image/ESP8266_IMG_0366.jpg!400"/>   
+<img src="//flysay.com/image/ESP8266_IMG_0367.jpg!400"/>   
+<img src="//flysay.com/image/ESP8266_IMG_0368.jpg!400"/>   
 </center>
    

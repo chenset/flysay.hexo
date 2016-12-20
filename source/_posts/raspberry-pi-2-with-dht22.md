@@ -25,7 +25,7 @@ date: 2016-01-06
 - DHT22第3个引脚(负极) 接 树莓派第6个引脚 GUD
 
 <center>
-<img src="//flysay.com/image/P1010249.JPG"/>
+<img src="//flysay.com/image/P1010249.JPG!400"/>
 </center>
 
 ### 开始
